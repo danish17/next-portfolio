@@ -3,7 +3,7 @@ import Social from "../Social";
 
 const Header = () => {
   return (
-    <Container>
+    <Container css={{ padding: 0 }}>
       <Row>
         <Text
           h1

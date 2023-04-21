@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import PageShell from "../components/layouts/PageShell";
 import { Container, Row, Text } from "@nextui-org/react";
+import Header from "../components/layouts/Header";
 
 const Home: NextPage = () => (
   <>
@@ -13,7 +14,14 @@ const Home: NextPage = () => (
     <PageShell>
       <Container xs>
         <Row css={{ padding: 20 }}>
-          <Text>Hey there!</Text>
+          <Header />
+        </Row>
+        <hr />
+        <Row css={{ padding: 20 }}>
+          <Text>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </Text>
         </Row>
       </Container>
     </PageShell>
