@@ -1,24 +1,23 @@
-import {
-  BsFillFileEarmarkPersonFill,
-  BsFillHouseFill,
-  BsFillPencilFill,
-} from "react-icons/bs";
-
 const navigationLinks = [
   {
     title: "Home",
     link: "/",
-    icon: <BsFillHouseFill />,
-  },
-  {
-    title: "CV",
-    link: "#",
-    icon: <BsFillFileEarmarkPersonFill />,
   },
   {
     title: "Blog",
-    link: "#",
-    icon: <BsFillPencilFill />,
+    link: "https://danishshakeel.me",
+  },
+  {
+    title: "CV",
+    link: "/profile",
+  },
+  {
+    title: "Projects",
+    link: "/projects",
+  },
+  {
+    title: "Publications",
+    link: "/publications",
   },
 ];
 

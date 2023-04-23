@@ -1,4 +1,4 @@
-import { Button, Navbar, Link, Tooltip } from "@nextui-org/react";
+import { Button, Navbar, Link, Tooltip, Text } from "@nextui-org/react";
 import ColorModeToggle from "../ColorModeToggle";
 import { BsFileCodeFill } from "react-icons/bs";
 import navigationLinks from "../../data/navigation";
@@ -12,11 +12,7 @@ const Navigation = () => {
       <Navbar.Collapse css={{ padding: 20 }}>
         {navigationLinks?.map((navItem) => (
           <Navbar.CollapseItem key={navItem.title}>
-            <Link href={navItem.link}>
-              <Button light icon={navItem.icon}>
-                {navItem.title}
-              </Button>
-            </Link>
+            <Link href={navItem.link}>{navItem.title}</Link>
           </Navbar.CollapseItem>
         ))}
       </Navbar.Collapse>
