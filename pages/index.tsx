@@ -1,15 +1,16 @@
 import Head from "next/head";
 import PageShell from "../components/layouts/PageShell";
-import { Container, Row, Text } from "@nextui-org/react";
+import { Row, Text } from "@nextui-org/react";
 import Header from "../components/layouts/Header";
 import client from "../apollo-client";
 import { gql } from "@apollo/client";
 import { IPosts } from "../types/post";
 import dynamic from "next/dynamic";
+import { PostSkeleton } from "../components/layouts/Skeleton";
 
 const Post = dynamic(() => import("../components/posts/Post"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => <PostSkeleton />,
 });
 
 const Home = (props: { posts: IPosts }) => {

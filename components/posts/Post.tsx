@@ -1,4 +1,4 @@
-import { Button, Card, Col, Row, Text } from "@nextui-org/react";
+import { Button, Card, Col, Loading, Row, Text } from "@nextui-org/react";
 import moment from "moment";
 import Link from "next/link";
 import { IPost } from "../../types/post";
