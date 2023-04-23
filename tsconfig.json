@@ -20,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     "data/navigation.js",
-    "data/social.js"
+    "data/social.js",
+    "pages/_document.js"
   ],
   "exclude": ["node_modules"]
 }

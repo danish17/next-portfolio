@@ -51,7 +51,10 @@ const Post = (props: { postData: IPost }) => {
         <Row>
           <Col>
             <Row>
-              <Col span={3}>
+              <Col
+                span={3}
+                css={{ display: "none", "@sm": { display: "block" } }}
+              >
                 <Card.Image
                   src={postData.author.node.avatar.url}
                   css={{ bg: "black", br: "50%" }}
@@ -61,7 +64,7 @@ const Post = (props: { postData: IPost }) => {
                 />
               </Col>
               <Col>
-                <Text color="#d1d1d1" size={12}>
+                <Text color="#d1d1d1" size={12} b>
                   {postData.author.node?.firstName}{" "}
                   {postData.author.node?.lastName}
                 </Text>

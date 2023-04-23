@@ -1,12 +1,16 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import PageShell from "../components/layouts/PageShell";
 import { Container, Row, Text } from "@nextui-org/react";
 import Header from "../components/layouts/Header";
-import Post from "../components/posts/Post";
 import client from "../apollo-client";
 import { gql } from "@apollo/client";
 import { IPosts } from "../types/post";
+import dynamic from "next/dynamic";
+
+const Post = dynamic(() => import("../components/posts/Post"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 const Home = (props: { posts: IPosts }) => {
   const { posts } = props;
@@ -18,20 +22,25 @@ const Home = (props: { posts: IPosts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageShell>
-        <Container xs>
-          <Row css={{ padding: 20 }}>
-            <Header />
+        <Row css={{ padding: 0, "@sm": { padding: 20 } }}>
+          <Header />
+        </Row>
+        <hr />
+        <Row css={{ padding: 0, "@sm": { padding: 20 } }}>
+          <Text h2>Blog</Text>
+        </Row>
+        {posts.nodes?.map((post) => (
+          <Row
+            css={{
+              padding: 0,
+              paddingRight: 0,
+              "@sm": { paddingLeft: 20, paddingRight: 20 },
+            }}
+            key={post.date}
+          >
+            <Post postData={post} />
           </Row>
-          <hr />
-          <Row css={{ padding: 20 }}>
-            <Text h2>Blog</Text>
-          </Row>
-          {posts.nodes?.map((post) => (
-            <Row css={{ paddingLeft: 20, paddingRight: 20 }} key={post.date}>
-              <Post postData={post} />
-            </Row>
-          ))}
-        </Container>
+        ))}
       </PageShell>
     </>
   );
