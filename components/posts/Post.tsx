@@ -22,7 +22,16 @@ const Post = (props: { postData: IPost }) => {
             href={postData?.link ?? "https://danishshakeel.me"}
             target="_blank"
           >
-            <Text h3 color="white">
+            <Text
+              h3
+              color="white"
+              css={{
+                "&:hover": {
+                  textDecoration: "underline",
+                  textDecorationStyle: "dotted",
+                },
+              }}
+            >
               {postData.title}
             </Text>
           </Link>
@@ -56,6 +65,8 @@ const Post = (props: { postData: IPost }) => {
                 css={{ display: "none", "@sm": { display: "block" } }}
               >
                 <Card.Image
+                  showSkeleton
+                  autoResize
                   src={postData.author.node.avatar.url}
                   css={{ bg: "black", br: "50%" }}
                   height={40}

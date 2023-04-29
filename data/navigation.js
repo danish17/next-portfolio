@@ -6,9 +6,10 @@ const navigationLinks = [
   {
     title: "Blog",
     link: "https://danishshakeel.me",
+    isExternal: true,
   },
   {
-    title: "CV",
+    title: "Profile",
     link: "/profile",
   },
   {
