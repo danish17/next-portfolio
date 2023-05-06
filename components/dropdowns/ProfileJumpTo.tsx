@@ -11,7 +11,14 @@ const JumpToDropwdown = () => {
       >
         Jump to
       </Dropdown.Button>
-      <Dropdown.Menu aria-label="Jump to section">
+      <Dropdown.Menu
+        aria-label="Jump to section"
+        onAction={(ev) => {
+          document
+            .getElementById(ev.toString())
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
         {ProfileSections.map((section) => (
           <Dropdown.Item key={section.slug} icon={section.icon}>
             {section.title}

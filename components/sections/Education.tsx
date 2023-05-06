@@ -17,7 +17,12 @@ const EducationSection = () => {
       >
         {EducationData.map((edu) => {
           return (
-            <Container key={edu.degree} css={{ padding: 0, margin: "$4 0" }}>
+            <Container
+              as="section"
+              id="education"
+              key={edu.degree}
+              css={{ padding: 0, margin: "$4 0" }}
+            >
               <Row
                 css={{
                   w: "100%",

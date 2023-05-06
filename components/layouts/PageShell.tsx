@@ -1,6 +1,7 @@
 import { Container, Row } from "@nextui-org/react";
 import Footer from "./Footer";
 import Navigation from "./Nav";
+import GoToTop from "../GoToTop";
 
 type PageShellProps = {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ const PageShell = (props: PageShellProps) => {
           </Row>
         </Container>
       </Container>
+      <GoToTop />
     </>
   );
 };

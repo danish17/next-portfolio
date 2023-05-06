@@ -4,6 +4,7 @@ import Head from "next/head";
 import CVDownloadDropdown from "../components/dropdowns/ProfileCvDownload";
 import WorkExperienceSection from "../components/sections/WorkExperience";
 import EducationSection from "../components/sections/Education";
+import JumpToDropwdown from "../components/dropdowns/ProfileJumpTo";
 
 var dayjs = require("dayjs");
 var customParseFormat = require("dayjs/plugin/customParseFormat");
@@ -62,6 +63,7 @@ const Profile = () => {
             <Text>SWE @ rtCamp | Researcher | Educator</Text>
             <Spacer />
             <CVDownloadDropdown />
+            <JumpToDropwdown />
           </Grid>
         </Grid.Container>
         <Spacer />

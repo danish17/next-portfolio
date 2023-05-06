@@ -4,7 +4,11 @@ import dayjs from "dayjs";
 
 const WorkExperienceSection = () => {
   return (
-    <Container css={{ padding: 0, margin: "$8 0" }}>
+    <Container
+      as="section"
+      id="work-experience"
+      css={{ padding: 0, margin: "$8 0" }}
+    >
       <h3>Work Experience</h3>
       <Grid
         direction="column"
