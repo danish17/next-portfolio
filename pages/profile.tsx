@@ -1,15 +1,17 @@
-import {
-  Container,
-  Dropdown,
-  Grid,
-  Image,
-  Spacer,
-  Text,
-} from "@nextui-org/react";
+import { Grid, Image, Spacer, Text } from "@nextui-org/react";
 import PageShell from "../components/layouts/PageShell";
-import { MdWork } from "react-icons/md";
-import { IoMdSchool } from "react-icons/io";
 import Head from "next/head";
+import CVDownloadDropdown from "../components/dropdowns/ProfileCvDownload";
+import WorkExperienceSection from "../components/sections/WorkExperience";
+import EducationSection from "../components/sections/Education";
+
+var dayjs = require("dayjs");
+var customParseFormat = require("dayjs/plugin/customParseFormat");
+var relativeTime = require("dayjs/plugin/relativeTime");
+var duration = require("dayjs/plugin/duration");
+dayjs.extend(customParseFormat);
+dayjs.extend(relativeTime);
+dayjs.extend(duration);
 
 const Profile = () => {
   return (
@@ -30,7 +32,14 @@ const Profile = () => {
               alt="Danish Shakeel"
               showSkeleton
               autoResize
-              css={{ borderRadius: "50%", maxH: "198px" }}
+              css={{
+                borderRadius: "50%",
+                maxH: "148px",
+                aspectRatio: "1 / 1",
+                "@sm": {
+                  maxH: "198px",
+                },
+              }}
             />
           </Grid>
           <Grid
@@ -52,27 +61,13 @@ const Profile = () => {
             </Text>
             <Text>SWE @ rtCamp | Researcher | Educator</Text>
             <Spacer />
-            <Dropdown>
-              <Dropdown.Button flat>Download CV</Dropdown.Button>
-              <Dropdown.Menu aria-label="Static Actions">
-                <Dropdown.Section title="Download CV">
-                  <Dropdown.Item key="new" icon={<IoMdSchool />}>
-                    Academia
-                  </Dropdown.Item>
-                  <Dropdown.Item key="copy" icon={<MdWork />}>
-                    Industry
-                  </Dropdown.Item>
-                </Dropdown.Section>
-              </Dropdown.Menu>
-            </Dropdown>
+            <CVDownloadDropdown />
           </Grid>
         </Grid.Container>
         <Spacer />
         <hr />
-        <Spacer />
-        <Container css={{ padding: 0 }}>
-          <h3>Work Experience</h3>
-        </Container>
+        <WorkExperienceSection />
+        <EducationSection />
       </PageShell>
     </>
   );
