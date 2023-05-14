@@ -128,3 +128,48 @@ export const ProfileSections = [
     command: "5",
   },
 ];
+
+export const AchievementsData = [
+  {
+    title: "Academic Gold Medal",
+    description:
+      "Awarded with the Academic Gold Medal for highest academic achievement and excellent conduct during the bachelor's degree.",
+    org: "Chandigarh University",
+    year: "2023",
+  },
+  {
+    title: "All-India Rank 3",
+    description:
+      "Secured All-India rank 3 in Global Assessment of Information Technology (GAIT); more than 6,000 students from all over the country participated in the examination.",
+    org: "GAIT",
+    year: "2021",
+  },
+  {
+    title: "Security Intelligence Engineer v2",
+    description:
+      "Successfully qualifed for the Security Intelligence Engineer v2 certification and passed the mastery examination.",
+    org: "IBM",
+    year: "2021",
+  },
+  {
+    title: "Digital India Cyber Security Champion",
+    description:
+      "Awarded with the Digital India award for winning the Cybersecurity Championship in which more than 1 million students participated.",
+    org: "Government of India",
+    year: "2016",
+  },
+  {
+    title: "1st, Int'l Cyber Olympiad",
+    description:
+      "Secured 1st position (state-level) in International Cyber Olympiad organized by the EduHeal Foundation, India.",
+    org: "EduHeal Foundation",
+    year: "2015",
+  },
+  {
+    title: "3rd, Int'l Science Olympiad",
+    description:
+      "Secured 3rd position (state-level) in International Science Olympiad organized by the EduHeal Foundation, India.",
+    org: "EduHeal Foundation",
+    year: "2015",
+  },
+];

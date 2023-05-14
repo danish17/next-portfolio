@@ -5,6 +5,7 @@ import CVDownloadDropdown from "../components/dropdowns/ProfileCvDownload";
 import WorkExperienceSection from "../components/sections/WorkExperience";
 import EducationSection from "../components/sections/Education";
 import JumpToDropwdown from "../components/dropdowns/ProfileJumpTo";
+import AchievementsSection from "../components/sections/Achievements";
 
 var dayjs = require("dayjs");
 var customParseFormat = require("dayjs/plugin/customParseFormat");
@@ -70,6 +71,7 @@ const Profile = () => {
         <hr />
         <WorkExperienceSection />
         <EducationSection />
+        <AchievementsSection />
       </PageShell>
     </>
   );
