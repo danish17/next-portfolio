@@ -173,3 +173,30 @@ export const AchievementsData = [
     year: "2015",
   },
 ];
+
+export const TestScoresData = [
+  {
+    title: "IELTS",
+    org: "IDP and British Council",
+    score: "8.0 / CEFR C1",
+    year: "2023",
+    description:
+      "Achieved band score of 8 in IELTS; corresponding to CEFR C1 level.",
+  },
+  {
+    title: "GAIT All-India Open 2021",
+    org: "GAIT",
+    score: "568",
+    year: "2021",
+    description:
+      "Secured All-India Rank 3 in the Global Assessment of Information Technology (GAIT) ALL INDIA OPEN 2021v1 Exam. 6,878 students, from various colleges across India, took the exam.",
+  },
+  {
+    title: "AMCAT",
+    org: "Aspiring Minds",
+    score: "3454",
+    year: "2020",
+    description:
+      "Rank 5 in the department, and 13 in all CSE and MCA branches.",
+  },
+];

@@ -6,6 +6,7 @@ import WorkExperienceSection from "../components/sections/WorkExperience";
 import EducationSection from "../components/sections/Education";
 import JumpToDropwdown from "../components/dropdowns/ProfileJumpTo";
 import AchievementsSection from "../components/sections/Achievements";
+import TestScores from "../components/sections/TestScores";
 
 var dayjs = require("dayjs");
 var customParseFormat = require("dayjs/plugin/customParseFormat");
@@ -72,6 +73,7 @@ const Profile = () => {
         <WorkExperienceSection />
         <EducationSection />
         <AchievementsSection />
+        <TestScores />
       </PageShell>
     </>
   );
