@@ -31,7 +31,7 @@ const Profile = () => {
         <Grid.Container>
           <Grid xs={12} md={6}>
             <Image
-              src="./profile.jpeg"
+              src="./profile.jpg"
               alt="Danish Shakeel"
               showSkeleton
               autoResize

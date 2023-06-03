@@ -1,9 +1,15 @@
-import { Text } from "@nextui-org/react";
+import { Spacer, Text } from "@nextui-org/react";
 import PageShell from "../components/layouts/PageShell";
 import Head from "next/head";
 import { GoogleScholarAuthorParameters, getJson } from "serpapi";
+import { IPublication } from "../types/publication";
+import CitationsChart from "../components/charts/CitationsChart";
+import PublicationsList from "../components/tables/PublicationTable";
 
-const Publications = () => {
+const Publications = (props: { pubData: IPublication }) => {
+  const { pubData } = props;
+
+  console.log(pubData);
   return (
     <>
       <Head>
@@ -16,6 +22,16 @@ const Publications = () => {
       </Head>
       <PageShell>
         <Text h2>Publications</Text>
+        <Spacer />
+        <CitationsChart data={pubData.cited_by} />
+        <Spacer />{" "}
+        <Text h5 style={{ textAlign: "center" }}>
+          Citations: {pubData.cited_by?.table[0]?.citations?.all} | h-index:
+          {pubData.cited_by?.table[1]?.h_index?.all}
+        </Text>
+        <Spacer />
+        <Text h3>List of Publications</Text>
+        <PublicationsList publications={pubData.articles} />
       </PageShell>
     </>
   );

@@ -11,12 +11,14 @@
   "dependencies": {
     "@apollo/client": "^3.7.12",
     "@nextui-org/react": "^1.0.0-beta.12",
+    "chart.js": "^4.3.0",
     "dayjs": "^1.11.7",
     "graphql": "^16.6.0",
     "moment": "^2.29.4",
     "next": "13.3.0",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "serpapi": "^1.1.1"
