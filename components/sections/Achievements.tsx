@@ -3,7 +3,7 @@ import { AchievementsData } from "../../data/profile";
 
 const AchievementsSection = () => {
   return (
-    <Container css={{ padding: 0, margin: "$8 0" }}>
+    <Container css={{ padding: 0, margin: "$8 0" }} id="achievements">
       <h3>Achievements & Awards</h3>
       <Grid
         direction="column"
@@ -19,7 +19,6 @@ const AchievementsSection = () => {
           return (
             <Container
               as="section"
-              id="achievements"
               key={achievement.title}
               css={{ padding: 0, margin: "$4 0" }}
             >

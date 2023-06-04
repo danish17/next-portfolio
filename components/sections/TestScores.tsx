@@ -3,7 +3,7 @@ import { TestScoresData } from "../../data/profile";
 
 const TestScores = () => {
   return (
-    <Container css={{ padding: 0, margin: "$8 0" }}>
+    <Container css={{ padding: 0, margin: "$8 0" }} id="scores">
       <h3>Test Scores</h3>
       <Grid
         direction="column"
@@ -19,7 +19,6 @@ const TestScores = () => {
           return (
             <Container
               as="section"
-              id="scores"
               key={test.title}
               css={{ padding: 0, margin: "$4 0" }}
             >

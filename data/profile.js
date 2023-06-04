@@ -8,6 +8,45 @@ import {
 } from "react-icons/io5";
 import { MdScore } from "react-icons/md";
 
+export const ProfileSections = [
+  {
+    title: "Work Experience",
+    slug: "work-experience",
+    icon: <IoBriefcase />,
+    command: "0",
+  },
+  {
+    title: "Education",
+    slug: "education",
+    icon: <IoSchool />,
+    command: "1",
+  },
+  {
+    title: "Projects",
+    slug: "projects",
+    icon: <IoCode />,
+    command: "2",
+  },
+  {
+    title: "Achievements",
+    slug: "achievements",
+    icon: <IoMedal />,
+    command: "4",
+  },
+  {
+    title: "Test Scores",
+    slug: "scores",
+    icon: <MdScore />,
+    command: "5",
+  },
+  {
+    title: "Skills",
+    slug: "skills",
+    icon: <IoStar />,
+    command: "3",
+  },
+];
+
 export const WorkExperienceData = [
   {
     title: "Software Engineer",
@@ -90,45 +129,6 @@ export const EducationData = [
   },
 ];
 
-export const ProfileSections = [
-  {
-    title: "Work Experience",
-    slug: "work-experience",
-    icon: <IoBriefcase />,
-    command: "0",
-  },
-  {
-    title: "Education",
-    slug: "education",
-    icon: <IoSchool />,
-    command: "1",
-  },
-  {
-    title: "Projects",
-    slug: "projects",
-    icon: <IoCode />,
-    command: "2",
-  },
-  {
-    title: "Skills",
-    slug: "skills",
-    icon: <IoStar />,
-    command: "3",
-  },
-  {
-    title: "Achievements",
-    slug: "achievements",
-    icon: <IoMedal />,
-    command: "4",
-  },
-  {
-    title: "Test Scores",
-    slug: "scores",
-    icon: <MdScore />,
-    command: "5",
-  },
-];
-
 export const AchievementsData = [
   {
     title: "Academic Gold Medal",
@@ -200,3 +200,46 @@ export const TestScoresData = [
       "Rank 5 in the department, and 13 in all CSE and MCA branches.",
   },
 ];
+
+export const SkillsData = {
+  industryKnowledge: [
+    "Full-Stack Development",
+    "Front-End Development",
+    "Systems Design",
+    "R&D",
+    "IT Consulting",
+    "System Engineering & DevOps",
+    "Server Management",
+  ],
+  technologies: [
+    "Next.js",
+    "React.js",
+    "WordPress",
+    "SQL & NoSQL Databases",
+    "Linux",
+    "GitHub",
+    "NewRelic",
+    "Frappe",
+    "Nest.js",
+    "ReST",
+    "GraphQL",
+    "Prototyping Tools (Figma & Adobe XD)",
+    "Adobe Illustrator",
+    "Amazon AWS",
+  ],
+  languages: [
+    "JavaScript",
+    "Python",
+    "PHP",
+    "TypeScript",
+    "HTML (😅)",
+    "CSS and Sass",
+    "Shell Scripting",
+  ],
+  interpersonal: [
+    "Creative Problem Solving",
+    "Leadership",
+    "Conflict Resolution",
+    "Verbal and Non-Verbal Communication",
+  ],
+};

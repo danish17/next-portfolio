@@ -9,7 +9,6 @@ import PublicationsList from "../components/tables/PublicationTable";
 const Publications = (props: { pubData: IPublication }) => {
   const { pubData } = props;
 
-  console.log(pubData);
   return (
     <>
       <Head>

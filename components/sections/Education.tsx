@@ -3,7 +3,7 @@ import { EducationData } from "../../data/profile";
 
 const EducationSection = () => {
   return (
-    <Container css={{ padding: 0, margin: "$8 0" }}>
+    <Container css={{ padding: 0, margin: "$8 0" }} id="education">
       <h3>Education</h3>
       <Grid
         direction="column"
@@ -19,7 +19,6 @@ const EducationSection = () => {
           return (
             <Container
               as="section"
-              id="education"
               key={edu.degree}
               css={{ padding: 0, margin: "$4 0" }}
             >

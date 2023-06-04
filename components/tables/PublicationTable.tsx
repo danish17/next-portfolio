@@ -1,8 +1,9 @@
-import { Container, Link, Row, Text } from "@nextui-org/react";
+import { Container, Link, Row, Text, useTheme } from "@nextui-org/react";
 import { TArticle } from "../../types/publication";
 
 const PublicationsList = (props: { publications: Array<TArticle> }) => {
   const { publications } = props;
+  const { isDark } = useTheme();
 
   return (
     <>
@@ -16,7 +17,7 @@ const PublicationsList = (props: { publications: Array<TArticle> }) => {
             rel="noreferrer noopener"
             target="_blank"
             css={{
-              color: "white",
+              color: isDark ? "white" : "$black",
               "&:hover": {
                 textDecoration: "underline",
                 textDecorationStyle: "dotted",

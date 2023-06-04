@@ -30,8 +30,15 @@ const CitationsChart = (props: { data: TCitedBy }) => {
         display: false,
       },
       title: {
-        display: true,
-        text: "Danish Shakeel - Citations",
+        display: false,
+      },
+    },
+    barThickness: 24,
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
       },
     },
   };

@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 import { PostSkeleton } from "../components/layouts/Skeleton";
 import WhoAmI from "../components/sections/WhoAmI";
 
-const Post = dynamic(() => import("../components/posts/Post"), {
+const Post = dynamic(() => import("../components/cards/Post"), {
   ssr: false,
   loading: () => <PostSkeleton />,
 });
