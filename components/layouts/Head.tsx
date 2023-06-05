@@ -40,7 +40,10 @@ const CustomHead = (props: { title: string }) => {
         property="twitter:description"
         content="I am an award-winning software engineer who loves to solve complex engineering problems and help businesses achieve their goals. I can help you take your business to new digital heights with enterprise-grade solutions specially crafted for your needs."
       />
-      <meta property="twitter:image" content="" />
+      <meta
+        property="twitter:image"
+        content="https://iamdani.sh/og-meta-img.png"
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
