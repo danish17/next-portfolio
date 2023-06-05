@@ -91,7 +91,8 @@ export async function getStaticProps() {
             featuredImage {
               node {
                 altText
-                sourceUrl(size: LARGE)
+                mediaItemUrl
+                sourceUrl(size: MEDIUM_LARGE)
               }
             }
             date

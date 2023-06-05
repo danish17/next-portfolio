@@ -10,6 +10,9 @@ const withPWA = require("next-pwa")({
 
 const nextConfig = withPWA({
   reactStrictMode: true,
+  images: {
+    minimumCacheTTL: 600,
+  },
 });
 
 module.exports = nextConfig;

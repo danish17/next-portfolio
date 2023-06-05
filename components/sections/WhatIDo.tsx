@@ -40,7 +40,7 @@ const WhatIDo = () => {
         >
           it deserves.
         </Text>
-        <Text h3 as="p">
+        <Text b css={{ fontSize: "$xl" }}>
           I can help you take your business to new digital heights with
           enterprise-grade solutions specially crafted for your needs.
         </Text>

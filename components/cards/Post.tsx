@@ -39,7 +39,7 @@ const Post = (props: { postData: IPost }) => {
       </Card.Header>
       <Card.Body css={{ p: 0 }}>
         <Card.Image
-          src={postData.featuredImage.node.sourceUrl}
+          src={`${postData.featuredImage.node.sourceUrl}.webp`}
           objectFit="cover"
           width="100%"
           height="100%"
@@ -90,6 +90,7 @@ const Post = (props: { postData: IPost }) => {
               <Link
                 href={postData?.link ?? "https://danishshakeel.me"}
                 target="_blank"
+                aria-label="Read full post"
               >
                 <Button
                   flat
@@ -103,7 +104,7 @@ const Post = (props: { postData: IPost }) => {
                     weight="bold"
                     transform="uppercase"
                   >
-                    Read More
+                    Read Full Post
                   </Text>
                 </Button>
               </Link>

@@ -17,7 +17,7 @@ const Header = () => {
         </Text>
       </Row>
       <Row>
-        <Text h3 as="p">
+        <Text b css={{ fontSize: "$xl" }}>
           Award-winning software engineer who loves to solve complex engineering
           problems and help businesses achieve their goals.
         </Text>

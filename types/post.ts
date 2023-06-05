@@ -1,6 +1,7 @@
 export type TImage = {
   altText: string;
   sourceUrl: string;
+  mediaItemUrl: string;
 };
 
 export type TAuthor = {
