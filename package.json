@@ -13,6 +13,7 @@
     "@nextui-org/react": "^1.0.0-beta.12",
     "chart.js": "^4.3.0",
     "dayjs": "^1.11.7",
+    "framer-motion": "^10.12.16",
     "graphql": "^16.6.0",
     "moment": "^2.29.4",
     "next": "13.3.0",
