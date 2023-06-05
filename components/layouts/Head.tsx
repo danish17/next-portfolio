@@ -28,7 +28,7 @@ const CustomHead = (props: { title: string }) => {
         property="og:description"
         content="I am an award-winning software engineer who loves to solve complex engineering problems and help businesses achieve their goals. I can help you take your business to new digital heights with enterprise-grade solutions specially crafted for your needs."
       />
-      <meta property="og:image" content="" />
+      <meta property="og:image" content="https://iamdani.sh/og-meta-img.png" />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://iamdani.sh" />
