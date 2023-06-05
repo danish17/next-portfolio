@@ -25,19 +25,18 @@ const Profile = () => {
       <CustomHead title="Profile — Danish Shakeel" />
       <PageShell>
         <Grid.Container>
-          <Grid xs={12} md={6}>
+          <Grid xs={12} md={6} alignItems="center">
             <Image
-              src="./profile-360x360.jpeg"
+              src="/profile-360x360.webp"
               alt="Danish Shakeel"
               showSkeleton
               autoResize
+              width={198}
+              height={198}
               css={{
                 borderRadius: "50%",
-                maxH: "148px",
+                maxH: "198px",
                 aspectRatio: "1 / 1",
-                "@sm": {
-                  maxH: "198px",
-                },
               }}
             />
           </Grid>

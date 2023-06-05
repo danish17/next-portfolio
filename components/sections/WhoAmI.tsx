@@ -31,7 +31,7 @@ const WhoAmI = () => {
             </Col>
           </Card.Header>
           <Card.Image
-            src="./profile-alt.jpeg"
+            src="/profile-alt.webp"
             objectFit="cover"
             width="100%"
             height={400}

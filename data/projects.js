@@ -18,7 +18,7 @@ const projectsData = [
     title: "EasyDash",
     desc: "Server, site, and project management tool used internally by rtCamp.",
     github: "",
-    image: "/projects/easydash.png",
+    image: "/projects/easydash.webp",
     deployed: "",
     tech: [
       <NextJs key="nextjs" height={16} />,
@@ -34,8 +34,7 @@ const projectsData = [
     title: "Visual QA Automation",
     desc: "Create, manage, and track visual QA tests on your apps using Playwright. PoC project for rtCamp.",
     github: "",
-    image:
-      "https://img.freepik.com/free-vector/hand-drawn-flat-design-metaverse-background_23-2149272282.jpg?w=1060&t=st=1685956306~exp=1685956906~hmac=38a7426b4855fa2d3bcae759cec71c3cb023b128a0e44fe57adc19c337c75839",
+    image: "/projects/obo-qa.webp",
     deployed: "",
     tech: [
       <NextJs key="nextjs" height={16} />,
@@ -61,8 +60,7 @@ const projectsData = [
     title: "Auto Server Backup",
     desc: "Collection of shell scripts to automatically backup Linux servers.",
     github: "https://github.com/danish17/alfred-slack-bot",
-    image:
-      "https://img.freepik.com/free-vector/big-data-processing-concept-server-room-blockchain-technology-token-access_39422-812.jpg?w=1380&t=st=1685899888~exp=1685900488~hmac=b8638717eb819faa23d9c73658b0bd382fdb0384baaed9b7fae2f861dda71e4c",
+    image: "/projects/server-backup.webp",
     deployed: "",
     tech: [<Bash key="bash" height={16} />],
   },
@@ -70,8 +68,7 @@ const projectsData = [
     title: "QUBO: Classical vs Quantum Techniques",
     desc: "Implementation of Quadratic Unconstrained Binary Optimization on Quantum computers and simulators.",
     github: "",
-    image:
-      "https://newsroom.ibm.com/file.php/183868/IBM_SystemOne_Andrew_Lindemann_2-1500.jpg?thumbnail=modal",
+    image: "/projects/qubo.webp",
     deployed: "",
     tech: [<Python key="python" height={16} />],
   },
@@ -79,8 +76,7 @@ const projectsData = [
     title: "BibTeX Chrome",
     desc: "Chrome extension to convert BibTeX citations to other formats.",
     github: "https://github.com/danish17/bibtex-chrome",
-    image:
-      "https://img.freepik.com/free-vector/scientists-working-concept_23-2148488315.jpg?w=1060&t=st=1685900376~exp=1685900976~hmac=01ff08b4be9e394b87d47c10b96b8216f276da3db7cacbea54f86c3aed83d5d9",
+    image: "/projects/bibtex.webp",
     deployed:
       "https://chrome.google.com/webstore/detail/bibtex-chrome/mpkkjoodomgaedblckommkefnpinkgpa?hl=en",
     tech: [<JavaScript key="js" height={16} />],
@@ -89,8 +85,7 @@ const projectsData = [
     title: "Lempify",
     desc: "CLI utility to set up LEMP stack on Linux machines and instances.",
     github: "https://github.com/danish17/lempify",
-    image:
-      "https://img.freepik.com/free-vector/server-concept-illustration_114360-287.jpg?w=1060&t=st=1685903368~exp=1685903968~hmac=71726cd567d90edb7006d955390983e47c35f55b406b41f414347c4c2f62b8d1",
+    image: "/projects/lempify.webp",
     deployed: "",
     tech: [<Bash key="bash" height={16} />],
   },
@@ -98,8 +93,7 @@ const projectsData = [
     title: "Litmus AI",
     desc: "Stylometric ML-based web-app to predict truthfulness of a news article.",
     github: "https://github.com/danish17/litmus-ai-web",
-    image:
-      "https://img.freepik.com/free-photo/high-angle-fake-news-title_23-2149318833.jpg?w=1480&t=st=1685903959~exp=1685904559~hmac=77ab1eb2ed1687d51badf479ca48518124a5dbaf393c9bcff34da765df5f0d92",
+    image: "/projects/litmus.webp",
     deployed: "",
     tech: [
       <Python key="python" height={16} />,
@@ -111,8 +105,7 @@ const projectsData = [
     title: "Drug Administration ML",
     desc: "ML-powered web-app to predict required Phenytoin dosage and resultant serum levels.",
     github: "",
-    image:
-      "https://img.freepik.com/free-photo/medicine-capsules-global-health-with-geometric-pattern-digital-remix_53876-126742.jpg?w=1480&t=st=1685955644~exp=1685956244~hmac=41a74e1aeddb80be1ed104b8f24d3638f2522fe59e10ca675aa7f85564ecd31b",
+    image: "/projects/drug-admin.webp",
     deployed:
       "https://www.researchgate.net/profile/Danish-Shakeel-2/publication/341575853_Personalized_drug_concentration_predictions_with_machine_learning_an_exploratory_study/links/5ec7e66a458515626cc15bf3/Personalized-drug-concentration-predictions-with-machine-learning-an-exploratory-study.pdf",
     tech: [
