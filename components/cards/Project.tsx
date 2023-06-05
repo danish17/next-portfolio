@@ -38,9 +38,15 @@ const ProjectCard = (props: { data: PropType; mini?: boolean }) => {
       />
       {!data.hideFooter && (
         <Card.Footer
+          isBlurred
           css={{
             justifyContent: "space-between",
             height: "64px",
+            position: "absolute",
+            bgBlur: "#ffffff",
+            borderTop: "$borderWeights$light solid $gray800",
+            bottom: 0,
+            zIndex: 1,
           }}
         >
           <Row css={{ width: "fit-content" }}>

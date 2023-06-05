@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 import { PostSkeleton } from "../components/layouts/Skeleton";
 import WhoAmI from "../components/sections/WhoAmI";
 import WriteToMe from "../components/sections/Email";
+import WhatIDo from "../components/sections/WhatIDo";
 
 const Post = dynamic(() => import("../components/cards/Post"), {
   ssr: false,
@@ -49,6 +50,8 @@ const Home = (props: { posts: IPosts }) => {
         ))}
         <hr />
         <WhoAmI />
+        <hr />
+        <WhatIDo />
         <WriteToMe />
       </PageShell>
     </>

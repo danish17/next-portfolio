@@ -10,7 +10,7 @@ const WhoAmI = () => {
       <Row
         css={{
           padding: 0,
-          "@sm": { paddingLeft: 20, paddingRight: 20 },
+          "@sm": { padding: 20 },
         }}
       >
         <Card>

@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const WriteToMe = () => {
   return (
-    <Container>
-      <Row css={{ padding: 0, "@sm": { padding: 20, marginTop: 20 } }}>
+    <Container css={{ padding: 0, gap: 0, "@sm": { padding: 20 } }}>
+      <Row>
         <Text>Write to me on:</Text>
       </Row>
-      <Row css={{ padding: 0, "@sm": { paddingLeft: 20, paddingRight: 20 } }}>
+      <Row>
         <Link href="mailto: hi@danishshakeel.me">
           <Text size="$5xl" b>
             hi@danishshakeel.me
