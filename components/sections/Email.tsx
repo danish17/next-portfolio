@@ -8,7 +8,10 @@ const WriteToMe = () => {
         <Text>Write to me on:</Text>
       </Row>
       <Row>
-        <Link href="mailto: hi@danishshakeel.me">
+        <Link
+          href="mailto: hi@danishshakeel.me"
+          style={{ wordWrap: "break-word", width: "100%" }}
+        >
           <Text size="$5xl" b>
             hi@danishshakeel.me
           </Text>
