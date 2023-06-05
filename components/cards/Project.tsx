@@ -11,7 +11,7 @@ type PropType = {
   tech: Array<ReactNode>;
   hideFooter?: boolean;
 };
-const ProjectCard = (props: { data: PropType }) => {
+const ProjectCard = (props: { data: PropType; mini?: boolean }) => {
   const { data } = props;
 
   return (
@@ -30,7 +30,7 @@ const ProjectCard = (props: { data: PropType }) => {
         src={data.image}
         objectFit="cover"
         width="100%"
-        height={340}
+        height={320}
         css={{
           filter: "blur(2.5px) brightness(0.35)",
         }}

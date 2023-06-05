@@ -28,7 +28,6 @@ const Projects = () => {
           ))}
         </Grid.Container>
       </PageShell>
-      ;
     </>
   );
 };

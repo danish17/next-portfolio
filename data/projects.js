@@ -8,6 +8,8 @@ import {
   Slack,
   Tensorflow,
   TypeScript,
+  SocketIo,
+  Redis,
 } from "../components/Icons";
 
 const projectsData = [
@@ -15,12 +17,29 @@ const projectsData = [
     title: "EasyDash",
     desc: "Server, site, and project management tool used internally by rtCamp.",
     github: "",
-    image: "/projects/alfred.webp",
+    image: "/projects/easydash.png",
     deployed: "",
     tech: [
       <NextJs key="nextjs" height={16} />,
       <NestJs key="nestjs" height={16} />,
       <TypeScript key="ts" height={16} />,
+      <SocketIo key="socket" height={16} />,
+      <Docker key="docker" height={16} />,
+      <Redis key="redis" height={16} />,
+    ],
+  },
+  {
+    title: "Visual QA Automation",
+    desc: "Create, manage, and track visual QA tests on your apps using Playwright. PoC project for rtCamp.",
+    github: "",
+    image:
+      "https://img.freepik.com/free-vector/hand-drawn-flat-design-metaverse-background_23-2149272282.jpg?w=1060&t=st=1685956306~exp=1685956906~hmac=38a7426b4855fa2d3bcae759cec71c3cb023b128a0e44fe57adc19c337c75839",
+    deployed: "",
+    tech: [
+      <NextJs key="nextjs" height={16} />,
+      <NestJs key="nestjs" height={16} />,
+      <TypeScript key="ts" height={16} />,
+      <JavaScript key="js" height={16} />,
       <Docker key="docker" height={16} />,
     ],
   },
@@ -84,6 +103,27 @@ const projectsData = [
       <JavaScript key="js" height={16} />,
       <Tensorflow key="tf" height={16} />,
     ],
+  },
+  {
+    title: "Drug Administration ML",
+    desc: "ML-powered web-app to predict required Phenytoin dosage and resultant serum levels.",
+    github: "",
+    image:
+      "https://img.freepik.com/free-photo/medicine-capsules-global-health-with-geometric-pattern-digital-remix_53876-126742.jpg?w=1480&t=st=1685955644~exp=1685956244~hmac=41a74e1aeddb80be1ed104b8f24d3638f2522fe59e10ca675aa7f85564ecd31b",
+    deployed:
+      "https://www.researchgate.net/profile/Danish-Shakeel-2/publication/341575853_Personalized_drug_concentration_predictions_with_machine_learning_an_exploratory_study/links/5ec7e66a458515626cc15bf3/Personalized-drug-concentration-predictions-with-machine-learning-an-exploratory-study.pdf",
+    tech: [
+      <Python key="python" height={16} />,
+      <JavaScript key="js" height={16} />,
+    ],
+  },
+  {
+    title: "My Kashmir",
+    desc: "Android app with ~50K downloads (4.8/5 stars) to bring all the information about Kashmir.",
+    github: "",
+    image: "/projects/mykashmir.webp",
+    deployed: "https://iamdani.sh/mykashmir",
+    tech: [],
   },
 ];
 

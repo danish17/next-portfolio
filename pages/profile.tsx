@@ -8,6 +8,7 @@ import JumpToDropwdown from "../components/dropdowns/ProfileJumpTo";
 import AchievementsSection from "../components/sections/Achievements";
 import TestScores from "../components/sections/TestScores";
 import SkillsSection from "../components/sections/Skills";
+import ProjectsSection from "../components/sections/Projects";
 
 var dayjs = require("dayjs");
 var customParseFormat = require("dayjs/plugin/customParseFormat");
@@ -70,10 +71,12 @@ const Profile = () => {
           </Grid>
         </Grid.Container>
         <Spacer />
-        <hr style={{ backgroundColor: "#fff" }} />
+        <hr style={{ height: "3px" }} />
         <WorkExperienceSection />
         <hr />
         <EducationSection />
+        <hr />
+        <ProjectsSection />
         <hr />
         <AchievementsSection />
         <hr />
