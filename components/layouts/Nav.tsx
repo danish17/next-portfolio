@@ -10,7 +10,12 @@ const Navigation = () => {
       <Navbar.Brand>
         <Navbar.Toggle aria-label="Open menu"></Navbar.Toggle>
       </Navbar.Brand>
-      <Navbar.Collapse css={{ padding: 20 }}>
+      <Navbar.Collapse
+        className="nav-content"
+        css={{
+          padding: 20,
+        }}
+      >
         {navigationLinks?.map((navItem) => (
           <Navbar.CollapseItem key={navItem.title}>
             {navItem?.isExternal ? (
