@@ -1,10 +1,10 @@
-import { Button, Navbar, Link, Tooltip, Text } from "@nextui-org/react";
+import { Navbar, Link, Text } from "@nextui-org/react";
 import ColorModeToggle from "../ColorModeToggle";
-import { BsFileCodeFill } from "react-icons/bs";
 import navigationLinks from "../../data/navigation";
-import NextLink from "next/link";
+import { useRouter } from "next/router";
 
 const Navigation = () => {
+  const router = useRouter();
   return (
     <Navbar disableShadow>
       <Navbar.Brand>
@@ -36,18 +36,20 @@ const Navigation = () => {
                 </Text>
               </Link>
             ) : (
-              <NextLink href={navItem.link}>
-                <Text
-                  css={{
-                    "&:hover": {
-                      textDecoration: "underline",
-                      textDecorationStyle: "dotted",
-                    },
-                  }}
-                >
-                  {navItem.title}
-                </Text>
-              </NextLink>
+              <Text
+                css={{
+                  "&:hover": {
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                    textDecorationStyle: "dotted",
+                  },
+                }}
+                onClick={() => {
+                  router.push(navItem.link);
+                }}
+              >
+                {navItem.title}
+              </Text>
             )}
           </Navbar.CollapseItem>
         ))}

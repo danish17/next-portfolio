@@ -1,7 +1,8 @@
 import { Button, Card, Col, Row, Text } from "@nextui-org/react";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const WhoAmI = () => {
+  const router = useRouter();
   return (
     <>
       <Row css={{ padding: 0, "@sm": { padding: 20 } }}>
@@ -52,10 +53,13 @@ const WhoAmI = () => {
           >
             <Row css={{ gap: 4 }}>
               <Button
-                flat
+                bordered
                 auto
                 rounded
-                css={{ color: "#94f9f0", bg: "#94f9f026" }}
+                color="warning"
+                onClick={() => {
+                  router.push("profile");
+                }}
               >
                 <Text
                   css={{ color: "inherit" }}
@@ -63,21 +67,9 @@ const WhoAmI = () => {
                   weight="bold"
                   transform="uppercase"
                 >
-                  Contact Me
+                  View Profile
                 </Text>
               </Button>
-              <Link href="/profile">
-                <Button bordered auto rounded color="warning">
-                  <Text
-                    css={{ color: "inherit" }}
-                    size={12}
-                    weight="bold"
-                    transform="uppercase"
-                  >
-                    View Profile
-                  </Text>
-                </Button>
-              </Link>
             </Row>
           </Card.Footer>
         </Card>
