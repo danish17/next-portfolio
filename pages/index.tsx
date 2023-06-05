@@ -8,7 +8,7 @@ import { IPosts } from "../types/post";
 import dynamic from "next/dynamic";
 import { PostSkeleton } from "../components/layouts/Skeleton";
 import WhoAmI from "../components/sections/WhoAmI";
-import Link from "next/link";
+import WriteToMe from "../components/sections/Email";
 
 const Post = dynamic(() => import("../components/cards/Post"), {
   ssr: false,
@@ -49,16 +49,7 @@ const Home = (props: { posts: IPosts }) => {
         ))}
         <hr />
         <WhoAmI />
-        <Row css={{ padding: 0, "@sm": { padding: 20, marginTop: 20 } }}>
-          <Text>Write to me on:</Text>
-        </Row>
-        <Row css={{ padding: 0, "@sm": { paddingLeft: 20, paddingRight: 20 } }}>
-          <Link href="mailto: hi@danishshakeel.me">
-            <Text size="$5xl" b>
-              hi@danishshakeel.me
-            </Text>
-          </Link>
-        </Row>
+        <WriteToMe />
       </PageShell>
     </>
   );

@@ -8,6 +8,7 @@ import AchievementsSection from "../components/sections/Achievements";
 import TestScores from "../components/sections/TestScores";
 import SkillsSection from "../components/sections/Skills";
 import ProjectsSection from "../components/sections/Projects";
+import WriteToMe from "../components/sections/Email";
 
 var dayjs = require("dayjs");
 var customParseFormat = require("dayjs/plugin/customParseFormat");
@@ -81,6 +82,8 @@ const Profile = () => {
         <SkillsSection />
         <hr />
         <ProjectsSection />
+        <hr />
+        <WriteToMe />
       </PageShell>
     </>
   );
