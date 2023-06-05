@@ -10,6 +10,7 @@ import {
   TypeScript,
   SocketIo,
   Redis,
+  Redux,
 } from "../components/Icons";
 
 const projectsData = [
@@ -23,6 +24,7 @@ const projectsData = [
       <NextJs key="nextjs" height={16} />,
       <NestJs key="nestjs" height={16} />,
       <TypeScript key="ts" height={16} />,
+      <Redux key="redux" height={16} />,
       <SocketIo key="socket" height={16} />,
       <Docker key="docker" height={16} />,
       <Redis key="redis" height={16} />,
@@ -40,6 +42,7 @@ const projectsData = [
       <NestJs key="nestjs" height={16} />,
       <TypeScript key="ts" height={16} />,
       <JavaScript key="js" height={16} />,
+      <Redux key="redux" height={16} />,
       <Docker key="docker" height={16} />,
     ],
   },

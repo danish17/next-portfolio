@@ -1,7 +1,6 @@
 import { Grid, Image, Spacer, Text } from "@nextui-org/react";
 import PageShell from "../components/layouts/PageShell";
 import Head from "next/head";
-import CVDownloadDropdown from "../components/dropdowns/ProfileCvDownload";
 import WorkExperienceSection from "../components/sections/WorkExperience";
 import EducationSection from "../components/sections/Education";
 import JumpToDropwdown from "../components/dropdowns/ProfileJumpTo";
@@ -33,7 +32,7 @@ const Profile = () => {
         <Grid.Container>
           <Grid xs={12} md={6}>
             <Image
-              src="./profile.jpg"
+              src="./profile-360x360.jpeg"
               alt="Danish Shakeel"
               showSkeleton
               autoResize
@@ -66,7 +65,6 @@ const Profile = () => {
             </Text>
             <Text>SWE @ rtCamp | Researcher | Educator</Text>
             <Spacer />
-            <CVDownloadDropdown />
             <JumpToDropwdown />
           </Grid>
         </Grid.Container>
@@ -76,14 +74,13 @@ const Profile = () => {
         <hr />
         <EducationSection />
         <hr />
-        <ProjectsSection />
-        <hr />
         <AchievementsSection />
         <hr />
         <TestScores />
         <hr />
         <SkillsSection />
         <hr />
+        <ProjectsSection />
       </PageShell>
     </>
   );

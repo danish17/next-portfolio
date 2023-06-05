@@ -40,13 +40,13 @@ const Message = () => {
       </Head>
       <PageShell>
         <Row css={{ padding: 0, "@sm": { paddingLeft: 20, paddingRight: 20 } }}>
-          <Text>You can write to me on my email address</Text>
+          <Text>For business enquiries:</Text>
         </Row>
         <Row css={{ padding: 0, "@sm": { paddingLeft: 20, paddingRight: 20 } }}>
           <Link href="mailto: hi@danishshakeel.me">
             <Text size="$5xl" b>
               hi@danishshakeel.me
-            </Text>{" "}
+            </Text>
           </Link>
         </Row>
       </PageShell>

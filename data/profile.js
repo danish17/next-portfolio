@@ -22,12 +22,6 @@ export const ProfileSections = [
     command: "1",
   },
   {
-    title: "Projects",
-    slug: "projects",
-    icon: <IoCode />,
-    command: "2",
-  },
-  {
     title: "Achievements",
     slug: "achievements",
     icon: <IoMedal />,
@@ -44,6 +38,12 @@ export const ProfileSections = [
     slug: "skills",
     icon: <IoStar />,
     command: "3",
+  },
+  {
+    title: "Projects",
+    slug: "projects",
+    icon: <IoCode />,
+    command: "2",
   },
 ];
 
