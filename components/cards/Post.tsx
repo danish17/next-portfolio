@@ -12,7 +12,7 @@ const Post = (props: { postData: IPost }) => {
   };
 
   return (
-    <Card css={{ w: "100%", h: "400px", marginBottom: "20px" }}>
+    <Card role="article" css={{ w: "100%", h: "400px", marginBottom: "20px" }}>
       <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
         <Col>
           <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">

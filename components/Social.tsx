@@ -11,8 +11,14 @@ const Social = () => {
           color="invert"
           placement="bottom"
         >
-          <Link href={link.link} target="_blank" rel={link?.rel}>
+          <Link
+            aria-label={link?.title}
+            href={link.link}
+            target="_blank"
+            rel={link?.rel}
+          >
             <Button
+              aria-label={link?.title}
               auto
               color={link?.color as never}
               css={link?.style}

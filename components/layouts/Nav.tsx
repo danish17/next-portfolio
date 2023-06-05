@@ -54,17 +54,7 @@ const Navigation = () => {
           </Navbar.CollapseItem>
         ))}
       </Navbar.Collapse>
-      <Navbar.Content>
-        {/* <Tooltip content="View Source Code" placement="bottom" color="invert">
-          <Link href="#">
-            <Button
-              auto
-              flat
-              icon={<BsFileCodeFill />}
-              aria-label="View source code"
-            />
-          </Link>
-        </Tooltip> */}
+      <Navbar.Content as="div">
         <ColorModeToggle />
       </Navbar.Content>
     </Navbar>

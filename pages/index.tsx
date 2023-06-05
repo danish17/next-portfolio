@@ -54,7 +54,7 @@ const Home = (props: { posts: IPosts }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query GetRecentPosts {
@@ -105,6 +105,7 @@ export async function getServerSideProps() {
     props: {
       posts: data?.posts,
     },
+    revalidate: 3600,
   };
 }
 export default Home;

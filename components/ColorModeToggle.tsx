@@ -14,7 +14,7 @@ const ColorModeToggle = () => {
         icon={<BsFillSunFill />}
         color="warning"
         aria-label="Turn on light mode"
-        onClick={(e) => setTheme("light")}
+        onClick={() => setTheme("light")}
       />
     );
   }
@@ -26,7 +26,7 @@ const ColorModeToggle = () => {
       icon={<BsFillMoonFill />}
       color="secondary"
       aria-label="Turn on dark mode"
-      onClick={(e) => setTheme("dark")}
+      onClick={() => setTheme("dark")}
     />
   );
 };

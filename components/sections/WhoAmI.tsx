@@ -14,7 +14,7 @@ const WhoAmI = () => {
           "@sm": { padding: 20 },
         }}
       >
-        <Card>
+        <Card role="article">
           <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
             <Col>
               <Text

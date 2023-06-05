@@ -30,7 +30,7 @@ const Publications = (props: { pubData: IPublication }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const params = {
     api_key: process.env.SERP_KEY,
     hl: "en",
@@ -47,6 +47,7 @@ export async function getServerSideProps() {
     props: {
       pubData: res,
     },
+    revalidate: 3600,
   };
 }
 
