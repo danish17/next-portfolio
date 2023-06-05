@@ -48,7 +48,7 @@ const Navigation = () => {
         ))}
       </Navbar.Collapse>
       <Navbar.Content>
-        <Tooltip content="View Source Code" placement="bottom" color="invert">
+        {/* <Tooltip content="View Source Code" placement="bottom" color="invert">
           <Link href="#">
             <Button
               auto
@@ -57,7 +57,7 @@ const Navigation = () => {
               aria-label="View source code"
             />
           </Link>
-        </Tooltip>
+        </Tooltip> */}
         <ColorModeToggle />
       </Navbar.Content>
     </Navbar>
