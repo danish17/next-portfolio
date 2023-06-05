@@ -9,6 +9,7 @@ import TestScores from "../components/sections/TestScores";
 import SkillsSection from "../components/sections/Skills";
 import ProjectsSection from "../components/sections/Projects";
 import WriteToMe from "../components/sections/Email";
+import CustomHead from "../components/layouts/Head";
 
 var dayjs = require("dayjs");
 var customParseFormat = require("dayjs/plugin/customParseFormat");
@@ -21,14 +22,7 @@ dayjs.extend(duration);
 const Profile = () => {
   return (
     <>
-      <Head>
-        <title>Profile - Danish Shakeel</title>
-        <meta
-          name="description"
-          content="Award-winning full-stack engineer who loves to solve complex software engineering problems."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <CustomHead title="Profile — Danish Shakeel" />
       <PageShell>
         <Grid.Container>
           <Grid xs={12} md={6}>

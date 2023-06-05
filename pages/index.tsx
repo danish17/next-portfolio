@@ -1,4 +1,3 @@
-import Head from "next/head";
 import PageShell from "../components/layouts/PageShell";
 import { Row, Text } from "@nextui-org/react";
 import Header from "../components/layouts/Header";
@@ -10,6 +9,7 @@ import { PostSkeleton } from "../components/layouts/Skeleton";
 import WhoAmI from "../components/sections/WhoAmI";
 import WriteToMe from "../components/sections/Email";
 import WhatIDo from "../components/sections/WhatIDo";
+import CustomHead from "../components/layouts/Head";
 
 const Post = dynamic(() => import("../components/cards/Post"), {
   ssr: false,
@@ -20,14 +20,10 @@ const Home = (props: { posts: IPosts }) => {
   const { posts } = props;
   return (
     <>
-      <Head>
-        <title>Danish Shakeel</title>
-        <meta
-          name="description"
-          content="Award-winning full-stack engineer who loves to solve complex software engineering problems."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <CustomHead
+        title="Danish Shakeel — Software Engineer, Educator, and Researcher based in
+      Kashmir."
+      />
       <PageShell>
         <Row css={{ padding: 0, "@sm": { padding: 20 } }}>
           <Header />

@@ -5,20 +5,14 @@ import { GoogleScholarAuthorParameters, getJson } from "serpapi";
 import { IPublication } from "../types/publication";
 import CitationsChart from "../components/charts/CitationsChart";
 import PublicationsList from "../components/tables/PublicationTable";
+import CustomHead from "../components/layouts/Head";
 
 const Publications = (props: { pubData: IPublication }) => {
   const { pubData } = props;
 
   return (
     <>
-      <Head>
-        <title>Danish Shakeel</title>
-        <meta
-          name="description"
-          content="Award-winning full-stack engineer who loves to solve complex software engineering problems."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <CustomHead title="Publications — Danish Shakeel" />
       <PageShell>
         <Text h2>Publications</Text>
         <Spacer />
