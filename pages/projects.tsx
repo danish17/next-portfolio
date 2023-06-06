@@ -1,4 +1,3 @@
-import Head from "next/head";
 import PageShell from "../components/layouts/PageShell";
 import { Grid, Spacer, Text } from "@nextui-org/react";
 import ProjectCard from "../components/cards/Project";

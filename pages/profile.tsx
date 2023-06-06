@@ -1,6 +1,5 @@
 import { Grid, Image, Spacer, Text } from "@nextui-org/react";
 import PageShell from "../components/layouts/PageShell";
-import Head from "next/head";
 import WorkExperienceSection from "../components/sections/WorkExperience";
 import EducationSection from "../components/sections/Education";
 import JumpToDropwdown from "../components/dropdowns/ProfileJumpTo";
@@ -57,7 +56,7 @@ const Profile = () => {
             >
               Danish Shakeel
             </Text>
-            <Text>SWE @ rtCamp | Researcher | Educator</Text>
+            <Text>Software Engineer @ rtCamp | Researcher | Educator</Text>
             <Spacer />
             <JumpToDropwdown />
           </Grid>

@@ -1,6 +1,5 @@
 import { Spacer, Text } from "@nextui-org/react";
 import PageShell from "../components/layouts/PageShell";
-import Head from "next/head";
 import { GoogleScholarAuthorParameters, getJson } from "serpapi";
 import { IPublication } from "../types/publication";
 import CitationsChart from "../components/charts/CitationsChart";
