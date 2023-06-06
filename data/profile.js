@@ -55,7 +55,7 @@ export const WorkExperienceData = [
     to: "",
     location: "Pune, India",
     description: [
-      "Led SaaS product developer teams involving 10+ developers.",
+      "Architected and developed multiple SaaS products.",
       "Created performant web apps using React.js, Next.js, JavaScript, TypeScript, Nest.js, Socket.io, etc.",
       "Designed and developed database systems using MariaDB (SQL) and MongoDB (No-SQL).",
       "Assisted teams with product design, management, architecture, and UI/UX.",
