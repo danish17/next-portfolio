@@ -62,8 +62,9 @@ const Profile = () => {
             <JumpToDropwdown />
           </Grid>
         </Grid.Container>
-        <Spacer />
-        <hr style={{ height: "3px" }} />
+        <Spacer y={2} />
+        <hr style={{ height: "2px" }} />
+        <Spacer y={1} />
         <WorkExperienceSection />
         <hr />
         <EducationSection />
@@ -73,9 +74,13 @@ const Profile = () => {
         <TestScores />
         <hr />
         <SkillsSection />
+        <Spacer y={2} />
         <hr />
+        <Spacer y={1} />
         <ProjectsSection />
+        <Spacer y={2} />
         <hr />
+        <Spacer y={1} />
         <WriteToMe />
       </PageShell>
     </>

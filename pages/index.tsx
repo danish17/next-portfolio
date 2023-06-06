@@ -1,5 +1,5 @@
 import PageShell from "../components/layouts/PageShell";
-import { Row, Text } from "@nextui-org/react";
+import { Row, Spacer, Text } from "@nextui-org/react";
 import Header from "../components/layouts/Header";
 import client from "../apollo-client";
 import { gql } from "@apollo/client";
@@ -28,7 +28,9 @@ const Home = (props: { posts: IPosts }) => {
         <Row css={{ padding: 0, "@sm": { padding: 20 } }}>
           <Header />
         </Row>
+        <Spacer y={1} />
         <hr />
+        <Spacer y={1} />
         <Row css={{ padding: 0, "@sm": { padding: 20 } }}>
           <Text h2>Blog</Text>
         </Row>
@@ -44,9 +46,13 @@ const Home = (props: { posts: IPosts }) => {
             <Post postData={post} />
           </Row>
         ))}
+        <Spacer y={1} />
         <hr />
+        <Spacer y={1} />
         <WhoAmI />
+        <Spacer y={2} />
         <hr />
+        <Spacer y={1} />
         <WhatIDo />
         <WriteToMe />
       </PageShell>

@@ -11,7 +11,7 @@ const PageShell = (props: PageShellProps) => {
   const { children } = props;
   return (
     <>
-      <Container sm justify="center" css={{ padding: 0 }}>
+      <Container sm justify="center" css={{ padding: 0, paddingTop: "96px" }}>
         <Row css={{ padding: 0, "@sm": { padding: 20 } }}>
           <Navigation />
         </Row>

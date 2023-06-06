@@ -19,11 +19,15 @@ const GoToTop = () => {
   return (
     <Button
       auto
+      flat
       icon={<IoMdArrowUp />}
       css={{
         position: "fixed",
         bottom: "$10",
-        right: "$16",
+        right: "$6",
+        "@sm": {
+          right: "$16",
+        },
         visibility: show ? "visible" : "hidden",
         opacity: show ? "0.75" : "0",
         pointerEvents: show ? "all" : "none",

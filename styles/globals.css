@@ -16,6 +16,10 @@ a {
   box-sizing: border-box;
 }
 
+.nav {
+  transition: box-shadow 0.15s ease-in-out;
+}
+
 .nav-content > ul {
   background: none !important;
   backdrop-filter: none !important;

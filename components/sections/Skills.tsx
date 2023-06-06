@@ -18,34 +18,58 @@ const SkillsSection = () => {
         <Text size="$lg" b>
           Industry Knowledge
         </Text>
-        <Container css={{ borderLeft: "2px solid", marginLeft: "2px" }}>
+        <Container
+          css={{
+            borderLeft: "2px solid",
+            borderColor: "rgba(0, 0, 0, 0.15)",
+            marginLeft: "2px",
+          }}
+        >
           {SkillsData.industryKnowledge.map((skill) => (
             <Text key={skill}>{skill}</Text>
           ))}
         </Container>
-        <Spacer />
+        <Spacer y={1} />
         <Text size="$lg" b>
           Tools & Technologies
         </Text>
-        <Container css={{ borderLeft: "2px solid", marginLeft: "2px" }}>
+        <Container
+          css={{
+            borderLeft: "2px solid",
+            borderColor: "rgba(0, 0, 0, 0.15)",
+            marginLeft: "2px",
+          }}
+        >
           {SkillsData.technologies.map((skill) => (
             <Text key={skill}>{skill}</Text>
           ))}
         </Container>
-        <Spacer />
+        <Spacer y={1} />
         <Text size="$lg" b>
           Languages
         </Text>
-        <Container css={{ borderLeft: "2px solid", marginLeft: "2px" }}>
+        <Container
+          css={{
+            borderLeft: "2px solid",
+            borderColor: "rgba(0, 0, 0, 0.15)",
+            marginLeft: "2px",
+          }}
+        >
           {SkillsData.languages.map((skill) => (
             <Text key={skill}>{skill}</Text>
           ))}
         </Container>
-        <Spacer />
+        <Spacer y={1} />
         <Text size="$lg" b>
           Interpersonal Skills
         </Text>
-        <Container css={{ borderLeft: "2px solid", marginLeft: "2px" }}>
+        <Container
+          css={{
+            borderLeft: "2px solid",
+            borderColor: "rgba(0, 0, 0, 0.15)",
+            marginLeft: "2px",
+          }}
+        >
           {SkillsData.interpersonal.map((skill) => (
             <Text key={skill}>{skill}</Text>
           ))}
