@@ -18,8 +18,8 @@ const Header = () => {
       </Row>
       <Row>
         <Text b css={{ fontSize: "$xl" }}>
-          Award-winning software engineer who loves to solve complex engineering
-          problems and help businesses achieve their goals.
+          Award-winning full-stack developer who loves to solve complex software
+          engineering problems and help businesses achieve their goals.
         </Text>
       </Row>
       <Row>
