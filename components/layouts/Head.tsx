@@ -6,8 +6,7 @@ const CustomHead = (props: { title: string }) => {
   return (
     <Head>
       <title>
-        Danish Shakeel — Full-Stack Developer, Educator, and Researcher based in
-        Kashmir.
+        {title}
       </title>
       <meta
         name="title"
