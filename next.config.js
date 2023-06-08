@@ -12,6 +12,7 @@ const nextConfig = withPWA({
   reactStrictMode: true,
   images: {
     minimumCacheTTL: 600,
+    domains: ["danishshakeel.me"],
   },
 });
 

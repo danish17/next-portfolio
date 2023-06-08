@@ -2,6 +2,7 @@ import { Button, Card, Col, Loading, Row, Text } from "@nextui-org/react";
 import moment from "moment";
 import Link from "next/link";
 import { IPost } from "../../types/post";
+import Image from "next/image";
 
 const Post = (props: { postData: IPost }) => {
   const { postData } = props;
@@ -38,13 +39,19 @@ const Post = (props: { postData: IPost }) => {
         </Col>
       </Card.Header>
       <Card.Body css={{ p: 0 }}>
-        <Card.Image
+        <Image
           src={`${postData.featuredImage.node.sourceUrl}.webp`}
-          objectFit="cover"
-          width="100%"
-          height="100%"
+          width={400}
+          height={400}
           alt={postData.featuredImage.node.altText}
-          css={{ filter: "brightness(50%)" }}
+          style={{
+            filter: "brightness(50%)",
+            objectFit: "cover",
+            width: "100%",
+            height: "100%",
+          }}
+          placeholder="blur"
+          priority
         />
       </Card.Body>
       <Card.Footer
@@ -71,7 +78,7 @@ const Post = (props: { postData: IPost }) => {
                   css={{ bg: "black", br: "50%" }}
                   height={40}
                   width={40}
-                  alt="Breathing app icon"
+                  alt={postData.author.node.firstName}
                 />
               </Col>
               <Col>
