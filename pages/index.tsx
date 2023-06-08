@@ -98,6 +98,7 @@ export async function getStaticProps() {
               node {
                 altText
                 mediaItemUrl
+                small: sourceUrl(size: THUMBNAIL)
                 sourceUrl(size: MEDIUM_LARGE)
               }
             }
