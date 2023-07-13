@@ -11,9 +11,24 @@ import {
   SocketIo,
   Redis,
   Redux,
+  MySQL,
 } from "../components/Icons";
 
 const projectsData = [
+  {
+    title: "Secrets",
+    desc: "API & Webapp to create and share n-time viewable secrets.",
+    github: "https://github.com/danish17/secrets",
+    image: "/projects/secrets.webp",
+    deployed: "https://secrets.iamdani.sh",
+    tech: [
+      <NextJs key="nextjs" height={16} />,
+      <NestJs key="nestjs" height={16} />,
+      <TypeScript key="ts" height={16} />,
+      <Redux key="redux" height={16} />,
+      <MySQL key="my-sql" height={16} />,
+    ],
+  },
   {
     title: "EasyDash",
     desc: "Server, site, and project management tool used internally by rtCamp.",
