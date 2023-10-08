@@ -40,9 +40,11 @@ const EducationSection = () => {
                   {edu.insitution} / {`${edu.from} - ${edu.to}`}
                 </Text>
               </Row>
-              <Row>
-                <Text b>Grade: {edu.grade}</Text>
-              </Row>
+              {edu?.grade && (
+                <Row>
+                  <Text b>Grade: {edu.grade}</Text>
+                </Row>
+              )}
               {edu.description && (
                 <Container>
                   {edu.description.map((desc, idx) => (

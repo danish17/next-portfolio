@@ -50,7 +50,6 @@ const Post = (props: { postData: IPost }) => {
             width: "100%",
             height: "100%",
           }}
-          placeholder="blur"
           priority
         />
       </Card.Body>

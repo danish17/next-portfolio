@@ -56,7 +56,10 @@ const Profile = () => {
             >
               Danish Shakeel
             </Text>
-            <Text>Software Engineer @ rtCamp | Researcher | Educator</Text>
+            <Text>
+              M.Sc. Computer Science @ Universität des Saarlandes | Software
+              Engineer @ rtCamp | Researcher | Educator
+            </Text>
             <Spacer />
             <JumpToDropwdown />
           </Grid>
