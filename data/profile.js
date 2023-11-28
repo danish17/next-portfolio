@@ -105,7 +105,7 @@ export const WorkExperienceData = [
 
 export const EducationData = [
   {
-    degree: "Master's degree in Computer Science",
+    degree: "M.Sc. Computer Science",
     insitution: "Universität des Saarlandes",
     from: "2023",
     to: "2025",
