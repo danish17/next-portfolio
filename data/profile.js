@@ -219,6 +219,7 @@ export const SkillsData = {
   ],
   technologies: [
     "Next.js",
+    "Nest.js",
     "React.js",
     "WordPress",
     "SQL & NoSQL Databases",
