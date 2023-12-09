@@ -40,7 +40,7 @@ const Post = (props: { postData: IPost }) => {
       </Card.Header>
       <Card.Body css={{ p: 0 }}>
         <Image
-          src={`${postData.featuredImage.node.sourceUrl}.webp`}
+          src={postData.featuredImage.node.sourceUrl + (!postData.featuredImage.node.sourceUrl.endsWith('.webp') ? '.webp' : '')}
           width={400}
           height={400}
           alt={postData.featuredImage.node.altText}
