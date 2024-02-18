@@ -22,7 +22,7 @@ const Home = (props: { posts: IPosts }) => {
     <>
       <CustomHead
         title="Danish Shakeel — Software Engineer, Educator, and Researcher based in
-      Kashmir."
+      Saarbrücken Germany."
       />
       <PageShell>
         <Row css={{ padding: 0, "@sm": { padding: 20 } }}>
