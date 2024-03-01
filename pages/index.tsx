@@ -21,7 +21,7 @@ const Home = (props: { posts: IPosts }) => {
   return (
     <>
       <CustomHead
-        title="Danish Shakeel — Software Engineer, Educator, and Researcher based in
+        title="Danish Shakeel — Sr. Software Engineer, Educator, and Researcher based in
       Saarbrücken Germany."
       />
       <PageShell>
