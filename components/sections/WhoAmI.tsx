@@ -27,7 +27,7 @@ const WhoAmI = () => {
               </Text>
               <Text h3 color="white">
                 I am a full-stack developer, educator, and researcher based in
-                Saarbrücken, Germany; currently pursuing my master's degree @Universität des Saarlandes and working as an Sr. Software Engineer @rtCamp.
+                Saarbrücken, Germany; currently pursuing my master&apos;s degree @Universität des Saarlandes and working as an Sr. Software Engineer @rtCamp.
               </Text>
             </Col>
           </Card.Header>
