@@ -124,6 +124,9 @@ export const EducationData = [
   {
     degree: "M.Sc. Computer Science",
     insitution: "Universität des Saarlandes",
+    description: [
+      "Coursework: Software Engineering, Human-Computer Interaction",
+    ],
     from: "2023",
     to: "2025",
   },
