@@ -16,6 +16,17 @@ import {
 
 const projectsData = [
   {
+    title: "CSV Deduper",
+    desc: "Next.js app to expand and deduplicate CSV rows while aggregating metrics.",
+    github: "https://github.com/danish17/csv-deduper",
+    image: "https://dedupe.iamdani.sh/og-image.jpeg",
+    deployed: "https://dedupe.iamdani.sh",
+    tech: [
+      <NextJs key="nextjs" height={16} />,
+      <TypeScript key="ts" height={16} />,
+    ],
+  },
+  {
     title: "Secrets",
     desc: "API & Webapp to create and share n-time viewable secrets.",
     github: "https://github.com/danish17/secrets",
