@@ -49,17 +49,35 @@ export const ProfileSections = [
 
 export const WorkExperienceData = [
   {
+    title: "Co-founder & CTO",
+    company: "Suprvise",
+    from: "11/2024",
+    to: "",
+    location: "Saarbrücken, Germany",
+    description: [
+      "Defined and executed the full technical roadmap and product strategy for an AI-driven SaaS startup.",
+      "Built and scaled a high-performing engineering team of 5; established agile workflows and engineering best practices.",
+      "Secured EUR125,000 in non-dilutive funding via EXIST-Gr¨understipendium to accelerate product development.",
+      "Architected a modular, multi-tenant microservices platform from scratch comprising of 10+ packages and 5 microservices.",
+      "Engineered plugin architecture for dynamic registration and loading capable of handling 500+ applications.",
+      "Oversaw the go-to-market (GTM) strategy in collaboration with stakeholders for product launch.",
+      "Led MVP demos with various pilot customers across multiple platforms."
+    ],
+  },
+  {
     title: "Sr. Software Engineer",
     company: "rtCamp Pvt. Ltd.",
     from: "02/2024",
     to: "",
-    location: "Pune, India (Remote)",
+    location: "USA (Remote)",
     description: [
-      "Architected and led research efforts to design and develop a new SaaS product from scratch used by millions of users.",
-      "Developed multi-threaded systems using NestJS with a capacity to handle more than 1.6 million requests (in a 20m load-test).",
-      "Optimized existing systems and reduced response time by an average of 2.61s (58%).",
-      "Created migration scripts and systems using Python and JavaScript for cross-database migration.",
-      "Implemented job queues and schedulers to handle more than 10,000 jobs per day.",
+      "Directed and mentored a growth engineering team, overseeing development of B2B solutions for user acquisition and retention.",
+      "Pioneered the architecture and development of Zazu, a RAG-powered platform for AI chatbots.",
+      "Engineered OnePress, an open-source enterprise-grade WordPress framework for multi-brand organizations.",
+      "Led technical strategy and architecture for a SaaS platform serving millions of users.",
+      "Optimized multi-threaded infrastructure supporting 700K+ users; improved API performance by 200%.",
+      "Managed hiring pipelines, conducted technical interviews, and delivered internal and corporate training to strengthen team capability.",
+      "Authored developer documentation and led DevRel initiatives, improving client engagement and adoption."
     ],
   },
   {
