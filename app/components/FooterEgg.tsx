@@ -15,23 +15,27 @@ const titles = [
 ];
 
 export function FooterEgg() {
-  const [index, setIndex] = useState(
-    Math.floor(Math.random() * titles.length)
-  );
+  const [index, setIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setIndex(Math.floor(Math.random() * titles.length));
+    setMounted(true);
+  }, []);
 
   const cycle = useCallback(() => {
     setIndex((i) => {
       let next = Math.floor(Math.random() * titles.length);
-      // Avoid repeating the same title
       if (next === i) next = (next + 1) % titles.length;
       return next;
     });
   }, []);
 
   useEffect(() => {
+    if (!mounted) return;
     const id = setInterval(cycle, 5000);
     return () => clearInterval(id);
-  }, [cycle]);
+  }, [cycle, mounted]);
 
   return (
     <button

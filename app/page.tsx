@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, GithubLogo, LinkedinLogo, InstagramLogo, Globe, EnvelopeSimple } from "@phosphor-icons/react/ssr";
+import { ArrowUpRight, GithubLogo, LinkedinLogo, InstagramLogo, Link, EnvelopeSimple } from "./components/Icons";
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
 import { FadeIn } from "./components/FadeIn";
@@ -11,6 +11,7 @@ import { ProjectsSection } from "./components/ProjectsSection";
 import { TalksSection } from "./components/TalksSection";
 import { ContactForm } from "./components/ContactForm";
 import { FooterEgg } from "./components/FooterEgg";
+import { KineticText } from "./components/KineticText";
 
 // ─── Blog helpers ──────────────────────────────────────────────────────────────
 
@@ -42,21 +43,6 @@ function estimateReadTime(text: string): string {
   const minutes = Math.max(1, Math.ceil(words / 200));
   return `${minutes} min read`;
 }
-
-function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
-
-function getPostMeta(post: IPost): string {
-  const category = post.categories?.edges?.[0]?.node?.name;
-  const date = formatDate(post.date);
-  return category ? `${category} · ${date}` : date;
-}
-
 
 const services = [
   {
@@ -139,7 +125,7 @@ export default async function Page() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
                 >
-                  View All
+View All
                   <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
@@ -231,7 +217,7 @@ export default async function Page() {
         </section>
 
         {/* ── Services ── */}
-        <section id="services" className={`${sectionBase} pb-0!`}>
+        <section id="services" className={sectionBase}>
           <div className="max-w-7xl mx-auto px-6 md:px-10">
             <FadeIn>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 mb-12 md:mb-16">
@@ -254,29 +240,37 @@ export default async function Page() {
                   </div>
                 ))}
               </div>
+
+              <div className="mt-16">
+                <a
+                  href="#contact"
+                  className="text-5xl md:text-8xl font-bold tracking-tighter text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors underline-offset-[6px]"
+                >
+<KineticText as="span" text="Let's talk." />
+                </a>
+              </div>
             </FadeIn>
           </div>
         </section>
-
-        {/* ── CTA ── */}
-        <div className="border-t border-zinc-200 dark:border-zinc-800">
-          <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
-            <a
-              href="#contact"
-              className="text-3xl md:text-4xl font-bold tracking-tighter text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors underline decoration-dotted underline-offset-[6px]"
-            >
-              Let&apos;s talk.
-            </a>
-          </div>
-        </div>
 
         {/* ── Research ── */}
         <section id="research" className={sectionBase}>
           <div className="max-w-7xl mx-auto px-6 md:px-10">
             <FadeIn>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 mb-12 md:mb-16">
-                Research.
-              </h2>
+              <div className="flex items-end justify-between mb-12 md:mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">
+                  Research.
+                </h2>
+                <a
+                  href="https://scholar.google.com/citations?user=QnC8JDQAAAAJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                >
+View Google Scholar
+                  <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </div>
               <ul className="flex flex-col">
                 {articles.map((article, i) => (
                   <li
@@ -298,24 +292,12 @@ export default async function Page() {
                         </p>
                       </div>
                       <ArrowUpRight
-                        size={18}
                         className="shrink-0 text-zinc-400 dark:text-zinc-700 group-hover:text-zinc-900 dark:group-hover:text-zinc-50 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       />
                     </a>
                   </li>
                 ))}
               </ul>
-              <div className="mt-8">
-                <a
-                  href="https://scholar.google.com/citations?user=QnC8JDQAAAAJ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-                >
-                  View Google Scholar
-                  <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
-              </div>
             </FadeIn>
           </div>
         </section>
@@ -366,7 +348,7 @@ export default async function Page() {
                   </p>
                 </div>
                 {/* Right: form */}
-                <div className="min-[840px]:pt-2 min-[840px]:min-w-[480px] min-[840px]:max-w-xl min-[840px]:flex-1">
+                <div className="min-[840px]:pt-2 min-[840px]:min-w-120 min-[840px]:max-w-xl min-[840px]:flex-1">
                   <ContactForm />
                 </div>
               </div>
@@ -387,7 +369,7 @@ export default async function Page() {
               className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
               aria-label="GitHub"
             >
-              <GithubLogo size={18} />
+              <GithubLogo size={18} weight="fill" />
             </a>
             <a
               href="https://linkedin.com/in/danishshakeel"
@@ -396,7 +378,7 @@ export default async function Page() {
               className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
               aria-label="LinkedIn"
             >
-              <LinkedinLogo size={18} />
+              <LinkedinLogo size={18} weight="fill" />
             </a>
             <a
               href="https://instagram.com/iamdanish17"
@@ -405,7 +387,7 @@ export default async function Page() {
               className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
               aria-label="Instagram"
             >
-              <InstagramLogo size={18} />
+              <InstagramLogo size={18} weight="fill" />
             </a>
             <a
               href="https://danishshakeel.me"
@@ -414,14 +396,14 @@ export default async function Page() {
               className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
               aria-label="Blog"
             >
-              <Globe size={18} />
+              <Link size={18} weight="fill" />
             </a>
             <a
               href="mailto:hi@danishshakeel.me"
               className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
               aria-label="Email"
             >
-              <EnvelopeSimple size={18} />
+              <EnvelopeSimple size={18} weight="fill" />
             </a>
           </div>
         </div>

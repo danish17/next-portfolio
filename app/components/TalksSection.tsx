@@ -144,9 +144,15 @@ export function TalksSection({ talks }: { talks: ITalk[] }) {
               </h2>
 
               {selected.eventDetails?.eventDetails && (
-                <p className="text-sm font-mono uppercase tracking-wider text-zinc-500 mb-6">
-                  {selected.eventDetails.eventDetails}
-                </p>
+                <a
+                  href={selected.eventDetails.eventDetails}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-zinc-900 dark:text-zinc-50 hover:opacity-70 transition-opacity mb-6"
+                >
+                  View Talk
+                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
               )}
 
               <div

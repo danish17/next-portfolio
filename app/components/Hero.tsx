@@ -3,8 +3,18 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 
-const MARQUEE_TEXT =
-  "Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel ·";
+const MARQUEE_SEGMENTS = 6;
+
+function MarqueeSegment() {
+  return (
+    <>
+      <span className="shrink-0">Danish Shakeel</span>
+      <span className="shrink-0 px-[0.15em]">·</span>
+      <span className="shrink-0 font-(family-name:--font-cormorant-sc)">Danish Shakeel</span>
+      <span className="shrink-0 px-[0.15em]">·</span>
+    </>
+  );
+}
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -22,8 +32,10 @@ export function Hero() {
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-    const span = track.firstElementChild as HTMLElement;
-    if (!span) return;
+    const children = Array.from(track.children);
+    const segCount = 4; // 4 spans per segment
+    if (children.length < segCount) return;
+    const segmentEls = children.slice(0, segCount) as HTMLElement[];
 
     let pos = 0;
     const speed = 1;
@@ -31,8 +43,8 @@ export function Hero() {
 
     const animate = () => {
       pos -= speed;
-      const spanWidth = span.offsetWidth;
-      if (pos <= -spanWidth) pos += spanWidth;
+      const segW = segmentEls.reduce((w, el) => w + el.offsetWidth, 0);
+      if (pos <= -segW) pos += segW;
       track.style.transform = `translate3d(${pos}px, 0, 0)`;
       raf = requestAnimationFrame(animate);
     };
@@ -76,13 +88,12 @@ export function Hero() {
           transform: "translateY(-50%)",
           width: "100%",
           zIndex: 4,
-          pointerEvents: "none",
           mixBlendMode: "difference",
         }}
       >
         <div
           ref={trackRef}
-          className="flex items-center whitespace-nowrap will-change-transform"
+          className="flex items-center whitespace-nowrap will-change-transform pointer-events-none"
           style={{
             fontSize: "clamp(80px, 18vw, 260px)",
             fontWeight: 500,
@@ -94,9 +105,11 @@ export function Hero() {
             paddingBlock: "0.15em",
           }}
         >
-          <span className="shrink-0">{MARQUEE_TEXT}</span>
-          <span className="shrink-0">{MARQUEE_TEXT}</span>
+          {Array.from({ length: MARQUEE_SEGMENTS }, (_, i) => (
+            <MarqueeSegment key={i} />
+          ))}
         </div>
+
       </div>
 
       {/* Hidden h1 for screen readers */}

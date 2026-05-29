@@ -98,6 +98,13 @@ export function ContactForm() {
       setEmail("");
       setMessage("");
       setTimeout(() => setStatus("idle"), 2500);
+      // Track in Google Analytics
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "form_submit", {
+          event_category: "contact",
+          event_label: "Contact Form",
+        });
+      }
     } catch {
       setStatus("error");
     } finally {
@@ -186,7 +193,7 @@ export function ContactForm() {
       <p className="text-[11px] text-zinc-400 leading-relaxed">
         This site is protected by Cloudflare Turnstile.{" "}
         <a
-          href="https://www.cloudflare.com/cloudflare-turnstile-privacy/"
+          href="https://www.cloudflare.com/privacypolicy/"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
@@ -195,7 +202,7 @@ export function ContactForm() {
         </a>
         {" · "}
         <a
-          href="https://www.cloudflare.com/application/terms/"
+          href="https://www.cloudflare.com/website-terms/"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"

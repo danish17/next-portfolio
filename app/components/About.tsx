@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GithubLogo, LinkedinLogo, InstagramLogo, Globe, EnvelopeSimple, DownloadSimple } from "@phosphor-icons/react/ssr";
+import { GithubLogo, LinkedinLogo, InstagramLogo, Link as LinkIcon, FileText, EnvelopeSimple } from "./Icons";
 import { FadeIn } from "./FadeIn";
 import Link from "next/link";
 
@@ -10,8 +10,8 @@ const socialLinks = [
     label: "LinkedIn",
   },
   {
-    href: "#",
-    icon: DownloadSimple,
+    href: "/cv.pdf",
+    icon: FileText,
     label: "CV",
   },
   {
@@ -21,7 +21,7 @@ const socialLinks = [
   },
   {
     href: "https://danishshakeel.me",
-    icon: Globe,
+    icon: LinkIcon,
     label: "Blog",
   },
   {
@@ -48,15 +48,15 @@ export function About() {
               </h2>
               <div className="flex flex-col gap-4 text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 <p>
-                  I&apos;m the Co-Founder and CTO{" "}
+                  As the Co-Founder and CTO{" "}
                   <Link
                     href="https://seatbase.io"
                     target="_blank"
                     className="text-zinc-800 dark:text-zinc-200 underline decoration-dotted underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
                   >
                     @seatbase.io
-                  </Link>
-                  , and Lead Engineer{" "}
+                  </Link>{" "}
+                  and Lead Engineer{" "}
                   <Link
                     href="https://rtcamp.com"
                     target="_blank"
@@ -64,23 +64,23 @@ export function About() {
                   >
                     @rtCamp
                   </Link>
-                  . Born and bred in 
-                  <>
-                  {" "}
-                  </>
+                  , I bring 7+ years of full-stack engineering excellence to the
+                  table. I specialize in architecting scalable enterprise solutions
+                  that currently serve millions of users worldwide.
+                </p>
+                <p>
+                  From my roots in{" "}
                   <Link
                     href="https://en.wikipedia.org/wiki/Kashmir"
                     target="_blank"
                     className="text-zinc-800 dark:text-zinc-200 underline decoration-dotted underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
                   >
                     Kashmir
-                  </Link>
-                  , I am currently based in Saarbrücken, Germany. I develop enterprise software, and build products for humans and machines.
-                </p>
-                <p>
-                  My work sits at the crossroads of engineering, business,
-                  and education. I care about software that is fast,
-                  accessible, and maintainable.
+                  </Link>{" "}
+                  to my current base in Saarbrücken, my philosophy remains the same:
+                  build software that is fast, accessible, and maintainable. I sit
+                  at the intersection of engineering and business, helping companies
+                  achieve exceptional results through strategic technology.
                 </p>
               </div>
               <div className="flex flex-wrap gap-x-5 gap-y-2 mt-2 text-sm text-zinc-500">
@@ -92,7 +92,7 @@ export function About() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
                   >
-                    <Icon size={16} />
+                    <Icon size={16} weight="fill" />
                     {label}
                   </a>
                 ))}
