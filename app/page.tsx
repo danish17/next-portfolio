@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUpRight, GithubLogo, LinkedinLogo, InstagramLogo, Globe, EnvelopeSimple } from "@phosphor-icons/react/ssr";
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
@@ -8,6 +9,8 @@ import { fetchPublications } from "./lib/scholar";
 import type { IPost, IProject, ITalk, TArticle } from "./lib/types";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { TalksSection } from "./components/TalksSection";
+import { ContactForm } from "./components/ContactForm";
+import { FooterEgg } from "./components/FooterEgg";
 
 // ─── Blog helpers ──────────────────────────────────────────────────────────────
 
@@ -148,17 +151,29 @@ export default async function Page() {
                     href={blogPosts[0].link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-8 md:p-10 mb-5 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+                    className="group block rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 mb-5 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
                   >
-                    <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-4">
-                      {estimateReadTime(stripHtml(blogPosts[0].content))}
-                    </p>
-                    <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-3 group-hover:opacity-60 transition-opacity">
-                      {stripHtml(blogPosts[0].title)}
-                    </h3>
-                    <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
-                      {stripHtml(blogPosts[0].excerpt)}
-                    </p>
+                    {blogPosts[0].featuredImage?.node && (
+                      <div className="relative h-56 md:h-72 bg-zinc-100 dark:bg-zinc-800">
+                        <Image
+                          src={blogPosts[0].featuredImage.node.sourceUrl}
+                          alt={blogPosts[0].featuredImage.node.altText || stripHtml(blogPosts[0].title)}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="p-8 md:p-10">
+                      <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-4">
+                        {estimateReadTime(stripHtml(blogPosts[0].content))}
+                      </p>
+                      <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-3 group-hover:opacity-60 transition-opacity">
+                        {stripHtml(blogPosts[0].title)}
+                      </h3>
+                      <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
+                        {stripHtml(blogPosts[0].excerpt)}
+                      </p>
+                    </div>
                   </a>
 
                   {/* Two smaller posts */}
@@ -170,17 +185,29 @@ export default async function Page() {
                           href={post.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group block rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 md:p-8 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+                          className="group block rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
                         >
-                          <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-4">
-                            {estimateReadTime(stripHtml(post.content))}
-                          </p>
-                          <h3 className="text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-2 group-hover:opacity-60 transition-opacity">
-                            {stripHtml(post.title)}
-                          </h3>
-                          <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                            {stripHtml(post.excerpt)}
-                          </p>
+                          {post.featuredImage?.node && (
+                            <div className="relative h-40 bg-zinc-100 dark:bg-zinc-800">
+                              <Image
+                                src={post.featuredImage.node.sourceUrl}
+                                alt={post.featuredImage.node.altText || stripHtml(post.title)}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
+                          )}
+                          <div className="p-6 md:p-8">
+                            <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-4">
+                              {estimateReadTime(stripHtml(post.content))}
+                            </p>
+                            <h3 className="text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-2 group-hover:opacity-60 transition-opacity">
+                              {stripHtml(post.title)}
+                            </h3>
+                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                              {stripHtml(post.excerpt)}
+                            </p>
+                          </div>
                         </a>
                       ))}
                     </div>
@@ -312,26 +339,36 @@ export default async function Page() {
         <section id="contact" className={sectionBase}>
           <div className="max-w-7xl mx-auto px-6 md:px-10">
             <FadeIn>
-              <div className="max-w-2xl">
-                <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 leading-[0.95]">
-                  Let&apos;s work
-                  <br />
-                  together.
-                </h2>
-                <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-md">
-                  Open to freelance projects, collaborations, and
-                  speaking engagements.
-                </p>
-                <a
-                  href="mailto:hi@danishshakeel.me"
-                  className="mt-8 inline-flex items-center gap-2 text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-50 hover:opacity-50 transition-opacity group"
-                >
-                  hi@danishshakeel.me
-                  <ArrowUpRight
-                    size={24}
-                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                  />
-                </a>
+              <div className="flex flex-col min-[840px]:flex-row min-[840px]:justify-between gap-12 min-[840px]:gap-20">
+                {/* Left: info */}
+                <div className="min-[840px]:max-w-md">
+                  <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 leading-[0.95]">
+                    Let&apos;s work
+                    <br />
+                    together.
+                  </h2>
+                  <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    Open to freelance projects, collaborations, and
+                    speaking engagements.
+                  </p>
+                  <a
+                    href="mailto:hi@danishshakeel.me"
+                    className="mt-8 inline-flex items-center gap-2 text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-50 hover:opacity-50 transition-opacity group"
+                  >
+                    hi@danishshakeel.me
+                    <ArrowUpRight
+                      size={24}
+                      className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                    />
+                  </a>
+                  <p className="font-mono text-sm">
+                  49.2382° N, 6.9975° E | 33.9349° N, 74.6400° E
+                  </p>
+                </div>
+                {/* Right: form */}
+                <div className="min-[840px]:pt-2 min-[840px]:min-w-[480px] min-[840px]:max-w-xl min-[840px]:flex-1">
+                  <ContactForm />
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -341,7 +378,7 @@ export default async function Page() {
       {/* ── Footer ── */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800 py-8 mt-auto">
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-zinc-500">
-          <span>Danish Shakeel, 2026</span>
+          <FooterEgg />
           <div className="flex items-center gap-5">
             <a
               href="https://github.com/danish17"

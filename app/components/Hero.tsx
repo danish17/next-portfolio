@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 
 const MARQUEE_TEXT =
-  " Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel ·";
+  "Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel · Danish Shakeel ·";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -26,7 +26,7 @@ export function Hero() {
     if (!span) return;
 
     let pos = 0;
-    const speed = 1; // px per frame at ~60fps
+    const speed = 1;
     let raf: number;
 
     const animate = () => {
@@ -44,7 +44,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] overflow-hidden bg-[#FAFDF6] dark:bg-black pt-16"
+      className="relative min-h-[100dvh] overflow-x-hidden bg-[#FAFDF6] dark:bg-black pt-16"
     >
       {/* Full-bleed background photo */}
       <Image
@@ -52,7 +52,7 @@ export function Hero() {
         alt=""
         fill
         loading="eager"
-        className="object-cover"
+        className="max-[2040px]:object-cover object-contain"
         style={{ objectPosition: "center 30%", zIndex: 1 }}
       />
 
@@ -75,7 +75,6 @@ export function Hero() {
           left: 0,
           transform: "translateY(-50%)",
           width: "100%",
-          overflow: "hidden",
           zIndex: 4,
           pointerEvents: "none",
           mixBlendMode: "difference",
@@ -83,14 +82,16 @@ export function Hero() {
       >
         <div
           ref={trackRef}
-          className="flex whitespace-nowrap will-change-transform"
+          className="flex items-center whitespace-nowrap will-change-transform"
           style={{
-            fontSize: "clamp(80px, 18vw, 200px)",
+            fontSize: "clamp(80px, 18vw, 260px)",
             fontWeight: 500,
-            lineHeight: 0.88,
+            lineHeight: 1.1,
             letterSpacing: "-0.06em",
             color: "rgb(255, 255, 255)",
             userSelect: "none",
+            WebkitUserSelect: "none",
+            paddingBlock: "0.15em",
           }}
         >
           <span className="shrink-0">{MARQUEE_TEXT}</span>
