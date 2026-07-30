@@ -54,16 +54,8 @@ export function About() {
                     target="_blank"
                     className="text-zinc-800 dark:text-zinc-200 underline decoration-dotted underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
                   >
-                    @seatbase.io
+                    @seatbase Technologies
                   </Link>{" "}
-                  and Lead Engineer{" "}
-                  <Link
-                    href="https://rtcamp.com"
-                    target="_blank"
-                    className="text-zinc-800 dark:text-zinc-200 underline decoration-dotted underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-                  >
-                    @rtCamp
-                  </Link>
                   , I bring 7+ years of full-stack engineering excellence to the
                   table. I specialize in architecting scalable enterprise solutions
                   that currently serve millions of users worldwide.
